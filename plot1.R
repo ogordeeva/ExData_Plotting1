@@ -18,6 +18,6 @@ data_date <- subset(data, Date=="2007-02-01" | Date=="2007-02-02")
 
 ## Create Plot 1
 hist(data_date$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)", cex.axis=.9, cex.lab=.9, cex.main=1)
-dev.copy(png, file="plot1.png") ## Copy plot1 to png file
+dev.copy(png, file="plot1.png", width=480, height=480) ## Copy plot1 to png file
 dev.off()
 ## Finish
