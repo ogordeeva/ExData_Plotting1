@@ -15,7 +15,8 @@ data$Time <- strptime(data$Time, "%d/%m/%Y %H:%M:%S")
 data_date <- subset(data, Date=="2007-02-01" | Date=="2007-02-02")
 ##str(data_date)
 
-## Create Plot 1
-hist(data_date$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
-dev.copy(png, file="plot1.png", width=480, height=480) ## Copy plot1 to png file
+
+## Create Plot 2
+with(data_date, plot(Time, Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")) ## sets an empty scatter
+dev.copy(png, file="plot2.png", width=480, height=480) ## Copy plot1 to png file
 dev.off()
