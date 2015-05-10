@@ -18,5 +18,5 @@ data_date <- subset(data, Date=="2007-02-01" | Date=="2007-02-02")
 
 ## Create Plot 2
 with(data_date, plot(Time, Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")) ## sets an empty scatter
-dev.copy(png, file="plot2.png", width=480, height=480) ## Copy plot1 to png file
+dev.copy(png, file="plot2.png", width=480, height=480) ## Copy plot2 to png file
 dev.off()
